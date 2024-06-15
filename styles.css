@@ -1,53 +1,98 @@
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EFF9F0;
 }
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
+
+
 header {
-    background: #50c878;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #310A31; 
     color: white;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
 }
-header a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+
+header img {
+    height: 50px;
+    width: auto;
 }
-header li {
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-header #branding {
-    float: left;
-}
-header #branding h1 {
+
+header .list {
+    display: flex;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
-header nav {
-    float: right;
-    margin-top: 10px;
+
+header .list_iten {
+    margin-left: 20px;
+    margin-right: 20px;
 }
-header .highlight, header .current a {
-    color: #e8491d;
-    font-weight: bold;
+
+header .list_iten a {
+    text-decoration: none;
+    color: #EFF9F0;
+    font-weight: 700;
+    transition: 0.6s;
 }
-header a:hover {
-    color: #cccccc;
-    font-weight: bold;
+
+header .list_iten a:hover {
+    color: #cfd4cf;
+    border: #570d57 solid 1px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #570d57;
 }
-@media (max-width: 600px) {
-    .container {
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .list_iten {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .list_iten a {
+        display: block;
+        padding: 10px 0;
         width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        height: 40px;
+    }
+
+    header .list_iten {
+        margin: 5px 0;
+    }
+
+    header .list_iten a {
+        padding: 8px 0;
+    }
+}
+
+
+
+
+
+
