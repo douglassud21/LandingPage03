@@ -1,98 +1,120 @@
+ 
+/**Paleta de cores
 
-body {
+rgb(248, 245, 248) Fundo
+#03045E Federal Blue
+#4F517D Ultra violet
+#DCCFEC Thistle
+#DDC4DD Thistle+1
+
+**/
+
+
+ * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #EFF9F0;
-}
+    box-sizing: border-box;
+ }
 
+ body {
+    background-color: rgb(248, 245, 248) ;
+ }
 
-header {
+ header {
+    width: 100%;
+    background-color: #4F517D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+ }
+
+ .logo-imagem {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 25px;
+ }
+
+.container-logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #310A31; 
-    color: white;
 }
 
-header img {
-    height: 50px;
-    width: auto;
-}
-
-header .list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header .list_iten {
+.logo-texto {
     margin-left: 20px;
-    margin-right: 20px;
+    font-size: 16px;
+    color: rgb(248, 245, 248);
 }
 
-header .list_iten a {
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+ .menu li a {
+    font-size: 18px;
     text-decoration: none;
-    color: #EFF9F0;
-    font-weight: 700;
-    transition: 0.6s;
+    color: rgb(248, 245, 248);
+    text-transform: uppercase;
+    border-radius: 25px;
+    padding: 15px;
+ }
+
+ .menu li a:hover {
+    color: #4F517D;
+    background-color: rgb(248, 245, 248);
+ }
+
+ /**conteudo principal**/
+
+ main {
+    display: grid;
+    grid-template-areas:
+        "area1"
+        "area2"
+        "area3";
+    grid-template-rows: 1fr 1fr 1fr; /* Divide igualmente em 3 linhas */
+ }
+
+ .area1 {
+    grid-area: area1;
+    /* Estilos para a primeira área */
+    width: 100%;
+    height: 100vh;
 }
 
-header .list_iten a:hover {
-    color: #cfd4cf;
-    border: #570d57 solid 1px;
-    padding: 10px;
-    border-radius: 15px;
-    background-color: #570d57;
+.area2 {
+    grid-area: area2;
+    /* Estilos para a segunda área */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header .list {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header .list_iten {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    header .list_iten a {
-        display: block;
-        padding: 10px 0;
-        width: 100%;
-    }
+.area3 {
+    grid-area: area3;
+    /* Estilos para a terceira área */
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    header img {
-        height: 40px;
-    }
-
-    header .list_iten {
-        margin: 5px 0;
-    }
-
-    header .list_iten a {
-        padding: 8px 0;
-    }
+#inicio {
+    background-color: #898cc2;
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "content"
+        "button";
+    grid-template-rows: 1fr 0.5fr 1fr; /* Divide igualmente em 3 linhas */
 }
 
+.title {
+    grid-area: title;
+    
+}
 
+.content {
+    grid-area: content;
+}
 
-
-
+.button {
+    grid-area: button;
+}
 
